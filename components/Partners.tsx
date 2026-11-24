@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 
 const partners = [
@@ -287,47 +286,6 @@ export default function Partners() {
             </div>
           ))}
         </div>
-
-        {/* Integration note */}
-        <p
-          style={{
-            textAlign: 'center',
-            marginTop: '36px',
-            fontSize: '12px',
-            color: 'var(--text-dim)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-          }}
-        >
-          <span style={{ width: '40px', height: '1px', background: 'var(--gold-border)', display: 'block' }} />
-          Placez vos logos dans{' '}
-          <code
-            style={{
-              background: 'var(--gold-light)',
-              color: 'var(--gold)',
-              padding: '1px 6px',
-              borderRadius: '4px',
-              fontSize: '11px',
-            }}
-          >
-            /public/logos/
-          </code>{' '}
-          puis remplacez les initiales par{' '}
-          <code
-            style={{
-              background: 'var(--gold-light)',
-              color: 'var(--gold)',
-              padding: '1px 6px',
-              borderRadius: '4px',
-              fontSize: '11px',
-            }}
-          >
-            &lt;Image /&gt;
-          </code>
-          <span style={{ width: '40px', height: '1px', background: 'var(--gold-border)', display: 'block' }} />
-        </p>
       </div>
 
       <style jsx>{`
