@@ -100,7 +100,7 @@ export default function Hero() {
       />
 
       {/* Left content */}
-      <div style={{ position: 'relative', zIndex: 2, padding: '0 44px' }}>
+      <div className="hero-left" style={{ position: 'relative', zIndex: 2, padding: '0 44px' }}>
         {/* Badge */}
         <div
           style={{
@@ -224,6 +224,7 @@ export default function Hero() {
 
         {/* Stats bar */}
         <div
+          className="hero-stats"
           style={{
             display: 'flex',
             gap: '28px',
@@ -239,6 +240,7 @@ export default function Hero() {
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
               {i > 0 && (
                 <div
+                  className="stat-divider"
                   style={{ width: '1px', height: '36px', background: 'var(--gold-border)' }}
                 />
               )}
@@ -273,6 +275,7 @@ export default function Hero() {
 
       {/* Right: service cards grid */}
       <div
+        className="hero-right"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -390,8 +393,25 @@ export default function Hero() {
         @media (max-width: 768px) {
           .hero-grid-wrap {
             grid-template-columns: 1fr !important;
-            padding-left: 20px !important;
-            padding-right: 20px !important;
+            padding-top: 90px !important;
+            padding-bottom: 60px !important;
+            min-height: auto !important;
+            gap: 40px !important;
+          }
+          .hero-left {
+            padding: 0 20px !important;
+          }
+          .hero-right {
+            padding: 0 20px !important;
+          }
+          .hero-stats {
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 16px !important;
+            padding: 20px 15px !important;
+          }
+          .stat-divider {
+            display: none !important;
           }
         }
       `}</style>
