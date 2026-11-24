@@ -24,11 +24,12 @@ const contactInfo = [
   {
     icon: Phone,
     text: '+226 77 04 62 23',
+    text: '+226 65 26 07 62',
   },
   {
     icon: MessageCircle,
-    text: 'WhatsApp : +226 77 04 62 23',
-    href: 'https://wa.me/22677046223?text=Bonjour%20LVSE%20CRÉATION%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services.',
+    text: 'WhatsApp : +226 52 45 59 95',
+    href: 'https://wa.me/22652455995?text=Bonjour%20LVSE%20CRÉATION%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services.',
   },
   {
     icon: Clock,
