@@ -128,6 +128,7 @@ export default function Partners() {
 
         {/* Cards grid */}
         <div
+          className="partners-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
@@ -139,6 +140,7 @@ export default function Partners() {
           {partners.map((partner) => (
             <div
               key={partner.id}
+              className="partner-card"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -204,11 +206,6 @@ export default function Partners() {
                   transition: 'border-color 0.3s',
                 }}
               >
-                {/* 
-                  Remplacez ce bloc par :
-                  <Image src={partner.logo} alt={partner.name} width={72} height={72} style={{ objectFit: 'contain', padding: '8px' }} />
-                  dès que vos logos sont disponibles dans /public/logos/
-                */}
                 <span
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
@@ -332,6 +329,18 @@ export default function Partners() {
           <span style={{ width: '40px', height: '1px', background: 'var(--gold-border)', display: 'block' }} />
         </p>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .partners-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .partner-card {
+            padding: 16px !important;
+            gap: 12px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
