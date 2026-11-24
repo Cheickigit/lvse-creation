@@ -307,7 +307,7 @@ export default function Footer() {
           <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>
             Réalisé par{' '}
             <a href="#" style={{ color: 'var(--gold)', textDecoration: 'none' }}>
-              VisualCraft
+              Nexora
             </a>
           </span>
         </div>
