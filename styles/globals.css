@@ -82,9 +82,8 @@ body {
   animation: float-up 0.7s ease forwards;
 }
 html, body {
-  overflow-x: hidden;
   max-width: 100vw;
-  width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
