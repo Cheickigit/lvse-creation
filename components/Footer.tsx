@@ -56,6 +56,7 @@ export default function Footer() {
       <div className="container-custom">
         {/* Top grid */}
         <div
+          className="footer-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1.8fr 1fr 1fr 1.4fr',
@@ -145,7 +146,7 @@ export default function Footer() {
             >
               Navigation
             </h5>
-            <ul style={{ listStyle: 'none' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
               {quickLinks.map((link) => (
                 <li key={link.name} style={{ marginBottom: '10px' }}>
                   <Link
@@ -156,8 +157,8 @@ export default function Footer() {
                       textDecoration: 'none',
                       transition: 'color 0.2s',
                     }}
-                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--gold)')}
-                    onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
+                    onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--gold)')}
+                    onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
                   >
                     {link.name}
                   </Link>
@@ -180,7 +181,7 @@ export default function Footer() {
             >
               Nos services
             </h5>
-            <ul style={{ listStyle: 'none' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
               {serviceLinks.map((link) => (
                 <li key={link.name} style={{ marginBottom: '10px' }}>
                   <Link
@@ -191,8 +192,8 @@ export default function Footer() {
                       textDecoration: 'none',
                       transition: 'color 0.2s',
                     }}
-                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--gold)')}
-                    onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
+                    onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--gold)')}
+                    onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
                   >
                     {link.name}
                   </Link>
@@ -215,7 +216,7 @@ export default function Footer() {
             >
               Contact
             </h5>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', padding: 0 }}>
               {contactInfo.map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                   <item.icon
@@ -236,8 +237,8 @@ export default function Footer() {
                         textDecoration: 'none',
                         transition: 'color 0.2s',
                       }}
-                      onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'var(--gold)')}
-                      onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
+                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--gold)')}
+                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
                     >
                       {item.text}
                     </a>
@@ -305,15 +306,27 @@ export default function Footer() {
           </span>
           <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>
             Réalisé par{' '}
-            <a
-              href="#"
-              style={{ color: 'var(--gold)', textDecoration: 'none' }}
-            >
+            <a href="#" style={{ color: 'var(--gold)', textDecoration: 'none' }}>
               VisualCraft
             </a>
           </span>
         </div>
       </div>
+
+      {/* RÈGLES POUR LE RESPONSIVE MOBILE */}
+      <style jsx>{`
+        @media (max-width: 900px) {
+          .footer-grid {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }
